@@ -1,4 +1,5 @@
-import 'package:first_page/task_page_screen.dart';
+import 'package:first_page/add_address_page.dart';
+import 'package:first_page/constants/color_constants.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,11 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'First Task',
+      title: 'Second Task',
       theme: ThemeData(
+        backgroundColor: BackgroundColor.panelColor,
         fontFamily: 'Poppins',
       ),
-      home: TaskPage(),
+      home: AddAddressPage(),
     );
   }
 }
