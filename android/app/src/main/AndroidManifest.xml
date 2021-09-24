@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.work_with_ahmet">
+    package="com.example.first_page">
    <application
-        android:label="work_with_ahmet"
+        android:label="first_page"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

@@ -1,6 +1,6 @@
 {
-    "name": "work_with_ahmet",
-    "short_name": "work_with_ahmet",
+    "name": "first_page",
+    "short_name": "first_page",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
