@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class InfoBar extends StatelessWidget {
   const InfoBar({
@@ -51,10 +52,7 @@ class InfoBar extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(
-                        Icons.add_comment,
-                        color: Color(0xff00FFFF),
-                      ),
+                      SvgPicture.asset('asset/icons/edit_icon.svg'),
                       Text(
                         'Edit',
                         style: TextStyle(color: Color(0xff00FFFF)),
@@ -101,10 +99,7 @@ class InfoBar extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(
-                        Icons.add_comment,
-                        color: Color(0xff00FFFF),
-                      ),
+                      SvgPicture.asset('asset/icons/edit_icon.svg'),
                       Text(
                         'Edit',
                         style: TextStyle(color: Color(0xff00FFFF)),

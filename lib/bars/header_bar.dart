@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HeaderBar extends StatelessWidget {
   const HeaderBar({
@@ -12,26 +13,30 @@ class HeaderBar extends StatelessWidget {
         padding: EdgeInsets.all(24),
         color: Color(0xff19223C),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
               'My Addresses',
-              style: TextStyle(fontSize: 36, color: Colors.white),
+              style: TextStyle(
+                  fontSize: 32,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold),
             ),
             Spacer(),
             Container(
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.add,
-                    color: Color(0xff00FFFF),
-                  ),
-                  Text(
-                    'Add',
-                    style: TextStyle(color: Color(0xff00FFFF)),
-                  ),
-                ],
+              child: Container(
+                padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                child: Row(
+                  children: [
+                    SvgPicture.asset('asset/icons/add_icon.svg'),
+                    SizedBox(
+                      width: 12,
+                    ),
+                    Text(
+                      'Add',
+                      style: TextStyle(color: Color(0xff00FFFF)),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class BackPageBar extends StatelessWidget {
   const BackPageBar({
@@ -10,14 +11,11 @@ class BackPageBar extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(24),
       color: Color(0xff19223C),
-      height: 58,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Icon(
-            Icons.keyboard_backspace,
-            color: Colors.white,
-          )
+          Container(
+              padding: EdgeInsets.fromLTRB(0, 0, 15, 10),
+              child: SvgPicture.asset('asset/icons/Back.svg')),
         ],
       ),
     );
