@@ -10,55 +10,57 @@ class TaskPage extends StatefulWidget {
 }
 
 class _TaskPageState extends State<TaskPage> {
-  static const _kFontFam = 'MyFlutterApp';
-  static const String? _kFontPkg = null;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Color(0xff19223C),
       body: Column(
         children: [
           SizedBox(
+            child: Container(
+              color: Color(0xff19223C),
+            ),
             height: 44,
           ),
           Container(
-            color: Colors.yellow,
+            padding: EdgeInsets.all(24),
+            color: Color(0xff19223C),
             height: 58,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Icon(
-                  IconData(0xe800,
-                      fontFamily: _kFontFam, fontPackage: _kFontPkg),
+                  Icons.keyboard_backspace,
                   color: Colors.white,
-                  size: 24,
-                ),
+                )
               ],
             ),
           ),
           Expanded(
             child: Container(
-              color: Colors.amber,
+              padding: EdgeInsets.all(24),
+              color: Color(0xff19223C),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
                     'My Addresses',
-                    style: TextStyle(
-                      fontSize: 36,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: TextStyle(fontSize: 36, color: Colors.white),
                   ),
-                  Icon(Icons.add),
-                  Text(
-                    'Add',
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      height: 26,
-                      color: Colors.black,
+                  Spacer(),
+                  Container(
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.add,
+                          color: Color(0xff00FFFF),
+                        ),
+                        Text(
+                          'Add',
+                          style: TextStyle(color: Color(0xff00FFFF)),
+                        ),
+                      ],
                     ),
                   ),
                 ],
@@ -66,50 +68,107 @@ class _TaskPageState extends State<TaskPage> {
             ),
           ),
           Container(
-            color: Colors.blueAccent,
+            padding: EdgeInsets.all(24),
+            decoration: BoxDecoration(
+                color: Color(0xff0A1430),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30),
+                  topRight: Radius.circular(30),
+                )),
             height: 622,
             child: Column(
               children: [
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('ev'),
-                        Text('Klee Emily'),
-                        Text('aaaaaaaaaaaaa'),
-                        Text('aaaaaaaaaaaaaaaaaaaaa'),
-                        Text('aaaaaaaaaaaaaaaaaaaaaaaaaaa'),
+                        Text(
+                          'EV',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        Text(
+                          'Klee Emily',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        Text(
+                          'Cankaya / Ankara',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        Text(
+                          'Yukari Ovecler Mahallesi',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        Text(
+                          'Turan Gunes Bulvari 1280. sokak 6/4',
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ],
                     ),
+                    Spacer(),
                     Column(
                       children: [
                         Row(
                           children: [
-                            Icon(Icons.add_comment),
-                            Text('edit'),
+                            Icon(
+                              Icons.add_comment,
+                              color: Color(0xff00FFFF),
+                            ),
+                            Text(
+                              'Edit',
+                              style: TextStyle(color: Color(0xff00FFFF)),
+                            ),
                           ],
                         )
                       ],
                     ),
                   ],
                 ),
+                SizedBox(
+                  height: 16,
+                ),
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('is'),
-                        Text('Klee Emily'),
-                        Text('aaaaaaaaaaaaa'),
-                        Text('aaaaaaaaaaaaaaaaaaaaa'),
-                        Text('aaaaaaaaaaaaaaaaaaaaaaaaaaa'),
+                        Text(
+                          'IS',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        Text(
+                          'Klee Emily',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        Text(
+                          'Cankaya / Ankara',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        Text(
+                          'Yukari Ovecler Mahallesi',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        Text(
+                          'Turan Gunes Bulvari 1280. sokak 6/4',
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ],
                     ),
+                    Spacer(),
                     Column(
                       children: [
                         Row(
                           children: [
-                            Icon(Icons.add_comment),
-                            Text('edit'),
+                            Icon(
+                              Icons.add_comment,
+                              color: Color(0xff00FFFF),
+                            ),
+                            Text(
+                              'Edit',
+                              style: TextStyle(color: Color(0xff00FFFF)),
+                            ),
                           ],
                         )
                       ],
