@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:first_page/widgets/address_info.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -11,11 +12,15 @@ class TaskPage extends StatefulWidget {
 }
 
 class _TaskPageState extends State<TaskPage> {
+  final Color panelColor = Color(0xff19223C);
+  final Color buttonColor = Color(0xff00FFFF);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff19223C),
+      backgroundColor: panelColor,
       body: SafeArea(
+        bottom: false,
         child: Column(
           children: [
             buildPanel(),
@@ -26,110 +31,34 @@ class _TaskPageState extends State<TaskPage> {
     );
   }
 
-  Container buildAdressList() {
-    return Container(
-      padding: EdgeInsets.all(24),
-      decoration: BoxDecoration(
-          color: Color(0xff0A1430),
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30),
-            topRight: Radius.circular(30),
-          )),
-      height: 622,
-      child: Column(
-        children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'EV',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  Text(
-                    'Klee Emily',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  Text(
-                    'Cankaya / Ankara',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  Text(
-                    'Yukari Ovecler Mahallesi',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  Text(
-                    'Turan Gunes Bulvari 1280. sokak 6/4',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ],
-              ),
-              Spacer(),
-              Column(
-                children: [
-                  Row(
-                    children: [
-                      SvgPicture.asset('asset/icons/edit_icon.svg'),
-                      Text(
-                        'Edit',
-                        style: TextStyle(color: Color(0xff00FFFF)),
-                      ),
-                    ],
-                  )
-                ],
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 16,
-          ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'IS',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  Text(
-                    'Klee Emily',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  Text(
-                    'Cankaya / Ankara',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  Text(
-                    'Yukari Ovecler Mahallesi',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  Text(
-                    'Turan Gunes Bulvari 1280. sokak 6/4',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ],
-              ),
-              Spacer(),
-              Column(
-                children: [
-                  Row(
-                    children: [
-                      SvgPicture.asset('asset/icons/edit_icon.svg'),
-                      Text(
-                        'Edit',
-                        style: TextStyle(color: Color(0xff00FFFF)),
-                      ),
-                    ],
-                  )
-                ],
-              ),
-            ],
-          ),
-        ],
+  Expanded buildAdressList() {
+    return Expanded(
+      child: Container(
+        padding: EdgeInsets.all(24),
+        decoration: BoxDecoration(
+            color: Color(0xff0A1430),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30),
+              topRight: Radius.circular(30),
+            )),
+        child: ListView(
+          children: [
+            AddressCard(
+              title: 'Ev',
+              name: 'Klee Emiliy',
+              city: 'Cankaya / Ankara',
+              district: 'Yukari Ovecler Mahallesi',
+              street: 'Turan Gunes Bulvari 1280. Sokak 6/4',
+            ),
+            AddressCard(
+              title: 'Is',
+              name: 'Klee Emiliy',
+              city: 'Cankaya / Ankara',
+              district: 'Yukari Ovecler Mahallesi',
+              street: 'Turan Gunes Bulvari 1280. Sokak 6/4',
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -138,17 +67,16 @@ class _TaskPageState extends State<TaskPage> {
     return Column(
       children: [
         Container(
+          alignment: Alignment.topLeft,
           padding: EdgeInsets.all(24),
-          color: Color(0xff19223C),
-          child: Row(
-            children: [
-              Container(child: SvgPicture.asset('asset/icons/Back.svg')),
-            ],
-          ),
+          color: panelColor,
+          child: Container(child: SvgPicture.asset('asset/icons/Back.svg')),
         ),
         Container(
+          height: 100,
+          alignment: Alignment.center,
           padding: EdgeInsets.fromLTRB(24, 0, 24, 0),
-          color: Color(0xff19223C),
+          color: panelColor,
           child: Row(
             children: [
               Text(
@@ -170,7 +98,7 @@ class _TaskPageState extends State<TaskPage> {
                       ),
                       Text(
                         'Add',
-                        style: TextStyle(color: Color(0xff00FFFF)),
+                        style: TextStyle(color: buttonColor),
                       ),
                     ],
                   ),
