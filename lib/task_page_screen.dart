@@ -68,12 +68,12 @@ class _TaskPageState extends State<TaskPage> {
       children: [
         Container(
           alignment: Alignment.topLeft,
-          padding: EdgeInsets.all(24),
+          padding: EdgeInsets.fromLTRB(24, 15, 0, 0),
           color: panelColor,
           child: Container(child: SvgPicture.asset('asset/icons/Back.svg')),
         ),
         Container(
-          height: 100,
+          height: 95,
           alignment: Alignment.center,
           padding: EdgeInsets.fromLTRB(24, 0, 24, 0),
           color: panelColor,
@@ -107,6 +107,7 @@ class _TaskPageState extends State<TaskPage> {
             ],
           ),
         ),
+        SizedBox(height: 15)
       ],
     );
   }

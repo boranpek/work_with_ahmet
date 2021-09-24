@@ -28,23 +28,23 @@ class AddressCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'EV',
+                  title,
                   style: TextStyle(color: Colors.white),
                 ),
                 Text(
-                  'Klee Emily',
+                  name,
                   style: TextStyle(color: Colors.white),
                 ),
                 Text(
-                  'Cankaya / Ankara',
+                  city,
                   style: TextStyle(color: Colors.white),
                 ),
                 Text(
-                  'Yukari Ovecler Mahallesi',
+                  district,
                   style: TextStyle(color: Colors.white),
                 ),
                 Text(
-                  'Turan Gunes Bulvari 1280. sokak 6/4',
+                  street,
                   style: TextStyle(color: Colors.white),
                 ),
               ],
@@ -69,7 +69,7 @@ class AddressCard extends StatelessWidget {
           ],
         ),
         SizedBox(
-          height: 42,
+          height: 100,
         ),
       ],
     );
