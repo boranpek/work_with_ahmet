@@ -1,5 +1,6 @@
 import 'dart:ui';
-
+import 'package:first_page/constants/color_constants.dart';
+import 'package:first_page/constants/icon_constants.dart';
 import 'package:first_page/widgets/address_info.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -12,13 +13,10 @@ class TaskPage extends StatefulWidget {
 }
 
 class _TaskPageState extends State<TaskPage> {
-  final Color panelColor = Color(0xff19223C);
-  final Color buttonColor = Color(0xff00FFFF);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: panelColor,
+      backgroundColor: BackgroundColor.panelColor,
       body: SafeArea(
         bottom: false,
         child: Column(
@@ -69,14 +67,14 @@ class _TaskPageState extends State<TaskPage> {
         Container(
           alignment: Alignment.topLeft,
           padding: EdgeInsets.fromLTRB(24, 15, 0, 0),
-          color: panelColor,
-          child: Container(child: SvgPicture.asset('asset/icons/Back.svg')),
+          color: BackgroundColor.panelColor,
+          child: Container(child: SvgPicture.asset(IconConstants.back_icon)),
         ),
         Container(
           height: 95,
           alignment: Alignment.center,
           padding: EdgeInsets.fromLTRB(24, 0, 24, 0),
-          color: panelColor,
+          color: BackgroundColor.panelColor,
           child: Row(
             children: [
               Text(
@@ -92,13 +90,13 @@ class _TaskPageState extends State<TaskPage> {
                   padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
                   child: Row(
                     children: [
-                      SvgPicture.asset('asset/icons/add_icon.svg'),
+                      SvgPicture.asset(IconConstants.add_icon),
                       SizedBox(
                         width: 12,
                       ),
                       Text(
                         'Add',
-                        style: TextStyle(color: buttonColor),
+                        style: TextStyle(color: BackgroundColor.buttonColor),
                       ),
                     ],
                   ),
