@@ -6,7 +6,6 @@ import 'package:first_page/widgets/switch_with_button.dart';
 import 'package:first_page/widgets/textformfield_desc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import 'widgets/customized_elevatedButton.dart';
 import 'widgets/twodropdown_desc.dart';
 
@@ -96,21 +95,18 @@ class _AddAddressPageState extends State<AddAddressPage> {
           child: Container(child: SvgPicture.asset(IconConstants.back_icon)),
         ),
         Container(
+          alignment: Alignment.centerLeft,
           padding: EdgeInsets.fromLTRB(24, 0, 0, 24),
           height: 88,
           color: BackgroundColor.panelColor,
-          child: Row(
-            children: [
-              Text(
-                'Add Address',
-                style: TextStyle(
-                    wordSpacing: 0.3,
-                    letterSpacing: 0.6,
-                    fontSize: 24,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
-              ),
-            ],
+          child: Text(
+            'Add Address',
+            style: TextStyle(
+                wordSpacing: 0.1,
+                letterSpacing: 0.6,
+                fontSize: 24,
+                color: Colors.white,
+                fontWeight: FontWeight.bold),
           ),
         ),
       ],

@@ -16,7 +16,6 @@ class _TaskPageState extends State<TaskPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: BackgroundColor.panelColor,
       body: SafeArea(
         bottom: false,
         child: Column(
