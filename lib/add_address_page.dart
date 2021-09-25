@@ -2,10 +2,12 @@ import 'dart:ui';
 import 'package:first_page/constants/color_constants.dart';
 import 'package:first_page/constants/icon_constants.dart';
 import 'package:first_page/widgets/dropdown_desc.dart';
+import 'package:first_page/widgets/switch_with_button.dart';
 import 'package:first_page/widgets/textformfield_desc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'widgets/customized_elevatedButton.dart';
 import 'widgets/twodropdown_desc.dart';
 
 class AddAddressPage extends StatefulWidget {
@@ -68,6 +70,13 @@ class _AddAddressPageState extends State<AddAddressPage> {
               TextFormFieldWithDesc(
                   description: 'Address Title',
                   hintSentence: 'Enter address title'),
+              SwitchWithButton(
+                description: 'Make this my primary address',
+              ),
+              SizedBox(
+                height: 28,
+              ),
+              CustomizedElevatedButton(description: 'Save Address'),
             ],
           ),
         ),
