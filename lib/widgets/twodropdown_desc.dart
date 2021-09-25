@@ -30,13 +30,16 @@ class TwoDropdownWithDesc extends StatelessWidget {
           children: [
             Text(
               descriptionOne,
-              style:
-                  TextStyle(color: BackgroundColor.inputColor.withOpacity(0.6)),
+              style: TextStyle(
+                color: BackgroundColor.inputColor.withOpacity(0.6),
+                fontSize: 12,
+              ),
             ),
-            SizedBox(height: 8),
+            SizedBox(height: 9),
             Container(
               width: (MediaQuery.of(context).size.width - 65) / 2,
-              padding: EdgeInsets.fromLTRB(12, 6, 12, 5),
+              height: 42,
+              padding: EdgeInsets.fromLTRB(11, 2, 11, 0),
               decoration: BoxDecoration(
                 color: BackgroundColor.inputFillColor,
                 border: Border.all(color: BackgroundColor.borderSideColor),
@@ -57,7 +60,7 @@ class TwoDropdownWithDesc extends StatelessWidget {
                 items: [],
               ),
             ),
-            SizedBox(height: 16),
+            SizedBox(height: 17),
           ],
         ),
         SizedBox(width: 17),
@@ -66,13 +69,16 @@ class TwoDropdownWithDesc extends StatelessWidget {
           children: [
             Text(
               descriptionTwo,
-              style:
-                  TextStyle(color: BackgroundColor.inputColor.withOpacity(0.6)),
+              style: TextStyle(
+                color: BackgroundColor.inputColor.withOpacity(0.6),
+                fontSize: 12,
+              ),
             ),
-            SizedBox(height: 8),
+            SizedBox(height: 9),
             Container(
+              height: 42,
+              padding: EdgeInsets.fromLTRB(11, 2, 11, 0),
               width: (MediaQuery.of(context).size.width - 65) / 2,
-              padding: EdgeInsets.fromLTRB(12, 6, 12, 5),
               decoration: BoxDecoration(
                 color: BackgroundColor.inputFillColor,
                 border: Border.all(color: BackgroundColor.borderSideColor),
@@ -93,7 +99,7 @@ class TwoDropdownWithDesc extends StatelessWidget {
                 items: [],
               ),
             ),
-            SizedBox(height: 16),
+            SizedBox(height: 17),
           ],
         ),
       ],

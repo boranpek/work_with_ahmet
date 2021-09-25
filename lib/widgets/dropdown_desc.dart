@@ -19,11 +19,15 @@ class DropDownWithDesc extends StatelessWidget {
       children: [
         Text(
           description,
-          style: TextStyle(color: BackgroundColor.inputColor.withOpacity(0.6)),
+          style: TextStyle(
+            color: BackgroundColor.inputColor.withOpacity(0.6),
+            fontSize: 12,
+          ),
         ),
-        SizedBox(height: 8),
+        SizedBox(height: 9),
         Container(
-          padding: EdgeInsets.fromLTRB(12, 6, 12, 5),
+          height: 42,
+          padding: EdgeInsets.fromLTRB(11, 2, 11, 0),
           decoration: BoxDecoration(
             color: BackgroundColor.inputFillColor,
             border: Border.all(color: BackgroundColor.borderSideColor),
@@ -32,7 +36,6 @@ class DropDownWithDesc extends StatelessWidget {
           child: DropdownButton(
             isExpanded: true,
             underline: SizedBox(),
-            elevation: 16,
             icon: SvgPicture.asset(IconConstants.underline_icon),
             disabledHint: Text(
               hintText,
@@ -44,7 +47,7 @@ class DropDownWithDesc extends StatelessWidget {
             items: [],
           ),
         ),
-        SizedBox(height: 16),
+        SizedBox(height: 17),
       ],
     );
   }

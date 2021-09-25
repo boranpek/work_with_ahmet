@@ -47,9 +47,9 @@ class _AddAddressPageState extends State<AddAddressPage> {
           padding: const EdgeInsets.fromLTRB(24, 0, 24, 0),
           child: ListView(
             children: [
-              SizedBox(height: 28),
+              SizedBox(height: 29),
               TextFormFieldWithDesc(
-                  description: 'First name',
+                  description: 'First Name',
                   hintSentence: 'Enter your first name'),
               TextFormFieldWithDesc(
                   description: 'Last Name',
@@ -70,11 +70,12 @@ class _AddAddressPageState extends State<AddAddressPage> {
               TextFormFieldWithDesc(
                   description: 'Address Title',
                   hintSentence: 'Enter address title'),
+              SizedBox(height: 7),
               SwitchWithButton(
                 description: 'Make this my primary address',
               ),
               SizedBox(
-                height: 28,
+                height: 27,
               ),
               CustomizedElevatedButton(description: 'Save Address'),
             ],
@@ -84,35 +85,35 @@ class _AddAddressPageState extends State<AddAddressPage> {
     );
   }
 
-  Padding buildPanel() {
-    return Padding(
-      padding: const EdgeInsets.only(left: 24),
-      child: Column(
-        children: [
-          Container(
-            height: 58,
-            alignment: Alignment.centerLeft,
-            color: BackgroundColor.panelColor,
-            child: Container(child: SvgPicture.asset(IconConstants.back_icon)),
+  Column buildPanel() {
+    return Column(
+      children: [
+        Container(
+          padding: EdgeInsets.all(16),
+          height: 58,
+          alignment: Alignment.centerLeft,
+          color: BackgroundColor.panelColor,
+          child: Container(child: SvgPicture.asset(IconConstants.back_icon)),
+        ),
+        Container(
+          padding: EdgeInsets.fromLTRB(24, 0, 0, 24),
+          height: 88,
+          color: BackgroundColor.panelColor,
+          child: Row(
+            children: [
+              Text(
+                'Add Address',
+                style: TextStyle(
+                    wordSpacing: 0.3,
+                    letterSpacing: 0.6,
+                    fontSize: 24,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
+              ),
+            ],
           ),
-          Container(
-            height: 88,
-            alignment: Alignment.center,
-            color: BackgroundColor.panelColor,
-            child: Row(
-              children: [
-                Text(
-                  'Add Address',
-                  style: TextStyle(
-                      fontSize: 24,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

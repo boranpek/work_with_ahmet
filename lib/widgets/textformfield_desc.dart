@@ -15,23 +15,32 @@ class TextFormFieldWithDesc extends StatelessWidget {
       children: [
         Text(
           description,
-          style: TextStyle(color: BackgroundColor.inputColor.withOpacity(0.6)),
-        ),
-        SizedBox(height: 8),
-        TextFormField(
-          decoration: InputDecoration(
-            filled: true,
-            fillColor: BackgroundColor.inputFillColor,
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: BackgroundColor.borderSideColor),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            hintText: hintSentence,
-            hintStyle:
-                TextStyle(color: BackgroundColor.inputColor.withOpacity(0.3)),
+          style: TextStyle(
+            color: BackgroundColor.inputColor.withOpacity(0.6),
+            fontSize: 12,
           ),
         ),
-        SizedBox(height: 16),
+        SizedBox(height: 9),
+        Container(
+          height: 42,
+          child: TextFormField(
+            decoration: InputDecoration(
+              contentPadding: EdgeInsets.fromLTRB(12, 11, 0, 0),
+              filled: true,
+              fillColor: BackgroundColor.inputFillColor,
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: BackgroundColor.borderSideColor),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              hintText: hintSentence,
+              hintStyle: TextStyle(
+                color: BackgroundColor.inputColor.withOpacity(0.3),
+                fontSize: 14,
+              ),
+            ),
+          ),
+        ),
+        SizedBox(height: 17),
       ],
     );
   }
