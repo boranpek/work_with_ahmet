@@ -24,6 +24,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
       body: SafeArea(
         bottom: false,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             buildPanel(),
             buildInputArea(),
@@ -84,22 +85,17 @@ class _AddAddressPageState extends State<AddAddressPage> {
     );
   }
 
-  Column buildPanel() {
-    return Column(
-      children: [
-        Container(
-          padding: EdgeInsets.all(16),
-          height: 58,
-          alignment: Alignment.centerLeft,
-          color: BackgroundColor.panelColor,
-          child: Container(child: SvgPicture.asset(IconConstants.back_icon)),
-        ),
-        Container(
-          alignment: Alignment.centerLeft,
-          padding: EdgeInsets.fromLTRB(24, 0, 0, 24),
-          height: 88,
-          color: BackgroundColor.panelColor,
-          child: Text(
+  Widget buildPanel() {
+    return Padding(
+      padding: const EdgeInsets.only(left: 24.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SvgPicture.asset(IconConstants.back_icon),
+          SizedBox(
+            height: 10,
+          ),
+          Text(
             'Add Address',
             style: TextStyle(
                 wordSpacing: 0.1,
@@ -108,8 +104,11 @@ class _AddAddressPageState extends State<AddAddressPage> {
                 color: Colors.white,
                 fontWeight: FontWeight.bold),
           ),
-        ),
-      ],
+          SizedBox(
+            height: 10,
+          ),
+        ],
+      ),
     );
   }
 }
