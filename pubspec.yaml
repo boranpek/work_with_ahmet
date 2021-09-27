@@ -25,6 +25,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  flutter_bloc: ^7.3.0
   flutter_launcher_icons: ^0.9.2
   flutter_svg: ^0.22.0
   flutter_switch: ^0.3.2
@@ -39,12 +40,19 @@ flutter_icons:
   adaptive_icon_padding: true
 
 dev_dependencies:
+  flutter_native_splash: ^1.2.4
+  build_runner: ^1.12.2
   flutter_test:
     sdk: flutter
-
-
-
-
+flutter_native_splash:
+  color: "#110F23"
+  image: asset/splash_image/splash.png
+  color_dark: "#110F23"
+  image_dark: asset/splash_image/splash.png
+  ios: true
+  ios_content_mode: scaleAspectFit
+  android: true
+  android_gravity: fill
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter.

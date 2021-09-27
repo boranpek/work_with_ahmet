@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:first_page/constants/color_constants.dart';
 import 'package:first_page/constants/icon_constants.dart';
 import 'package:first_page/widgets/address_info.dart';
+import 'package:first_page/widgets/counter_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -16,6 +17,7 @@ class _TaskPageState extends State<TaskPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: BackgroundColor.panelColor,
       body: SafeArea(
         bottom: false,
         child: Column(
@@ -54,6 +56,7 @@ class _TaskPageState extends State<TaskPage> {
               district: 'Yukari Ovecler Mahallesi',
               street: 'Turan Gunes Bulvari 1280. Sokak 6/4',
             ),
+            CounterWidget(),
           ],
         ),
       ),
@@ -67,7 +70,14 @@ class _TaskPageState extends State<TaskPage> {
           alignment: Alignment.topLeft,
           padding: EdgeInsets.fromLTRB(24, 15, 0, 0),
           color: BackgroundColor.panelColor,
-          child: Container(child: SvgPicture.asset(IconConstants.back_icon)),
+          child: Container(
+            child: GestureDetector(
+              child: SvgPicture.asset(IconConstants.back_icon),
+              onTap: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ),
         ),
         Container(
           height: 95,

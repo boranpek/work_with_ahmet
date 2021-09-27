@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:first_page/constants/color_constants.dart';
 import 'package:first_page/constants/icon_constants.dart';
+import 'package:first_page/widgets/counter_widget.dart';
 import 'package:first_page/widgets/dropdown_desc.dart';
 import 'package:first_page/widgets/switch_with_button.dart';
 import 'package:first_page/widgets/textformfield_desc.dart';
@@ -48,6 +49,10 @@ class _AddAddressPageState extends State<AddAddressPage> {
           child: ListView(
             children: [
               SizedBox(height: 29),
+              CounterWidget(),
+              SizedBox(height: 20),
+              CustomizedElevatedButton(description: 'My Address'),
+              SizedBox(height: 20),
               TextFormFieldWithDesc(
                   description: 'First Name',
                   hintSentence: 'Enter your first name'),
@@ -77,7 +82,6 @@ class _AddAddressPageState extends State<AddAddressPage> {
               SizedBox(
                 height: 27,
               ),
-              CustomizedElevatedButton(description: 'Save Address'),
             ],
           ),
         ),

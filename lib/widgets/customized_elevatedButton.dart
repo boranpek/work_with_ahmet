@@ -1,4 +1,5 @@
 import 'package:first_page/constants/color_constants.dart';
+import 'package:first_page/constants/router_constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomizedElevatedButton extends StatelessWidget {
@@ -21,7 +22,9 @@ class CustomizedElevatedButton extends StatelessWidget {
           ),
         ),
       ),
-      onPressed: () {},
+      onPressed: () {
+        Navigator.of(context).pushNamed(RouteConstant.MY_ADDRESS);
+      },
       child: Text(
         description,
         style: TextStyle(
