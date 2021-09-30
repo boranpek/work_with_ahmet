@@ -1,19 +1,55 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'pages/adresses_page.dart';
+import 'counter_cubit.dart';
+import 'counter_page.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(CounterApp());
 
-class MyApp extends StatelessWidget {
+class CounterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Material App',
-      debugShowCheckedModeBanner:false,
-      theme: ThemeData(
-        primaryColor: Color(0xff010A24),
+      debugShowCheckedModeBanner: false,
+      home: BlocProvider(
+        create: (BuildContext context) => CounterCubit(),
+        child: CounterPage(),
       ),
-      home: AdressesPage(),
     );
   }
 }
+
+/*
+void main() => runApp(CounterApp());
+
+class CounterApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    BlocProvider(create: (BuildContext context) => CounterCubit(),);
+    return Builder(
+      builder: (context) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: CounterPage(),
+        );
+      }
+    );
+  }
+}
+*/
+
+/*
+void main() => runApp(CounterApp());
+
+class CounterApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: BlocProvider(
+        create: (_) => CounterCubit(),
+        child: CounterPage(),
+      ),
+    );
+  }
+}
+*/
